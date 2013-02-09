@@ -1,0 +1,20 @@
+{
+  "name": "express-autoroute",
+  "version": "0.0.1",
+  "description": "Automatically load routes from a structured routes/ folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "vows test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Blooie/express-autoroute.git"
+  },
+  "keywords": [
+    "express",
+    "routing",
+    "automation"
+  ],
+  "author": "Andrew Manson",
+  "license": "BSD"
+}
