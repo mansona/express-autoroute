@@ -16,5 +16,8 @@
     "automation"
   ],
   "author": "Andrew Manson",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "winston": "~0.6.2"
+  }
 }
