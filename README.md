@@ -64,6 +64,29 @@ app.post('/api/blacklists', create);
 app.detete('/api/blacklists/:id' : del);
 ```
 
+### Middelwares
+A nifty feature in express is the ability to have route specific middlewares, and if they are used correctly they can really reduce the amount of code you write and always keep things DRY. express-autoroute supports the use of route middlewares by just adding an array to the autoroute object. Here is a silly little example but at least it explains the idea: 
+
+```js 
+module.exports.autoroute = {
+	get: {
+		'/blacklists' : [authentication, get_all]
+	}
+};
+
+function get_all(req, res){
+	//use the user object to get something
+	var myBlacklists = db.getMyBlacklists(req.user.id)
+	res.send(myBlacklists);
+}
+
+function authentication(req, res, next){
+	//get the user object or whatever 
+	req.user = dbUser;
+	next();
+}
+```
+
 # Licence
 Copyright (c) 2013, Andrew Manson <andrew@bloo.ie>, Blooie Limited <info@bloo.ie>
 

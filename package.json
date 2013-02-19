@@ -1,6 +1,6 @@
 {
   "name": "express-autoroute",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Automatically load routes from a structured routes/ folder",
   "main": "index.js",
   "scripts": {
