@@ -15,7 +15,7 @@ First things first you need to enable the autorouter and pass it your express ap
 
 ```js
 var autoroute = require('express-autoroute');
-autoroute(app); //where app is an express app
+autoroute(app,logger); //where app is an express app and logger (optional) is an instance of winston. 
 ```
 
 For express-autoroute to start working you need to have a ```routes/``` folder that contains specially formatted javascript files that expose an autoroute object that contains the public route api. The best way to describe it is with an example. 
