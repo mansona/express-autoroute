@@ -15,10 +15,14 @@ First things first you need to enable the autorouter and pass it your express ap
 
 ```js
 var autoroute = require('express-autoroute');
-autoroute(app,logger); //where app is an express app and logger (optional) is an instance of winston. 
+autoroute(app,options); //where app is an express app; 
 ```
 
 For express-autoroute to start working you need to have a ```routes/``` folder that contains specially formatted javascript files that expose an autoroute object that contains the public route api. The best way to describe it is with an example. 
+
+Options may include: 
+```throwErrors: Boolean``` will throw all errors found while loading routes
+```logger: winston instance``` as a default it will use the internal default winston object. If you wish to use custom settings then pass in an instance defined within your app.	
 
 This is the contents of a file  ```routes/blacklists.js```. Note that the name of the file has nothing to do with the resulting endpoint so you can structure your files however you like.
 
