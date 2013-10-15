@@ -10,10 +10,9 @@ module.exports = function(app, options) {
     }
     else {
         options.logger.debug('using specified logger')
-
     }
 
-    var routesDir = path.dirname(require.main.filename) + "/routes";
+    var routesDir = path.join(process.cwd(), "routes");
 
     options.logger.debug("Loading routes directory", {
         dir: routesDir
