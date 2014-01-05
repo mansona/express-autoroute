@@ -12,11 +12,16 @@ module.exports = function(app, options) {
         options.logger.debug('using specified logger')
     }
 
-    var routesDir = path.join(process.cwd(), "routes");
+    // default to using a 'routes' as path unless an alternate path is specified in options
+    var routesPath = (options.routesPath) ? options.routesPath : 'routes';
+    var routesDir = path.join(process.cwd(), routesPath);
+
+    // default to creating routes from the root domain unless a route prefix is specified in options
+    var routePrefix = path.join('/', (options.routePrefix) ? options.routePrefix : '');
 
     options.logger.debug("Loading routes directory", {
         dir: routesDir
     });
 
-    loader.loadDirectory(routesDir, "", app, options);
+    loader.loadDirectory(routesDir, routePrefix, app, options);
 };
