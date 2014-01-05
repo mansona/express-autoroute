@@ -24,6 +24,10 @@ Options may include:
 
 ```throwErrors: Boolean``` will throw all errors found while loading routes
 
+```routhPath: String``` contains an optional path containing routes; defaults to '/routes'
+
+```routePrefix: String``` contains an optional prefix to add to url for all auto-generated routes; defaults to ''
+
 ```logger: winston instance``` as a default it will use the internal default winston object. If you wish to use custom settings then pass in an instance defined within your app.	
 
 This is the contents of a file  ```routes/blacklists.js```. Note that the name of the file has nothing to do with the resulting endpoint so you can structure your files however you like.
