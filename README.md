@@ -27,6 +27,8 @@ Options may include:
 
 ```logger: winston instance``` as a default it will use the internal default winston object. If you wish to use custom settings then pass in an instance defined within your app.	
 
+```routesDir: String``` defaults to ```routes/```
+
 This is the contents of a file  ```routes/blacklists.js```. Note that the name of the file has nothing to do with the resulting endpoint so you can structure your files however you like.
 
 ```js
