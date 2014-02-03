@@ -18,6 +18,6 @@
   "author": "Andrew Manson",
   "license": "MIT",
   "dependencies": {
-    "winston": "~0.6.2"
+    "winston": "~0.7.2"
   }
 }
