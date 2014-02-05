@@ -4,7 +4,8 @@
   "description": "Automatically load routes from a structured routes/ folder",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "npm run test-node",
+    "test-node": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "chai": "~1.9.0",
-    "supertest": "~0.9.0"
+    "supertest": "~0.9.0",
+    "mocha": "~1.17.1"
   }
 }
