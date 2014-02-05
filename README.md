@@ -1,4 +1,5 @@
 [![Dependency Status](https://david-dm.org/Blooie/express-autoroute.png)](https://david-dm.org/Blooie/express-autoroute)
+[![Build Status](https://travis-ci.org/Blooie/express-autoroute.png?branch=develop)](https://travis-ci.org/Blooie/express-autoroute)
 
 # Express Autoroute
 This helper library has come about after about a year of slowly improving how we structure our NodeJS apps at Blooie and ultimately me being fed up of having to continuously type out ```app.get('/blah', blah_handler)``` and wondering where different paths are being constructed. 
