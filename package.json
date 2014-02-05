@@ -4,7 +4,7 @@
   "description": "Automatically load routes from a structured routes/ folder",
   "main": "index.js",
   "scripts": {
-    "test": "vows test/*"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,9 @@
   "license": "MIT",
   "dependencies": {
     "winston": "~0.7.2"
+  },
+  "devDependencies": {
+    "chai": "~1.9.0",
+    "supertest": "~0.9.0"
   }
 }

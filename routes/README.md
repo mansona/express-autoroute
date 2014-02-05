@@ -1,0 +1,1 @@
+This folder is not providing any routes. It is the basis for the "normal" test case where we don't specify the starting folder.
