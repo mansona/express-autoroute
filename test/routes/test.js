@@ -13,21 +13,21 @@ module.exports.autoroute = {
 };
 
 function getTest(req, res){
-	res.send("get");
+	res.send("get test/routes");
 }
 
 function getTestParameter(req, res){
-	res.send(req.params.id);
+	res.send(req.params.id + " test/routes");
 }
 
 function postTest(req, res){
-	res.send("post");
+	res.send("post test/routes");
 }
 
 function postTestParameter(req, res){
-	res.send(req.params.id);
+	res.send(req.params.id + " test/routes");
 }
 
 function deleteTest(req, res){
-	res.send(req.params.id);
+	res.send(req.params.id + " test/routes");
 }

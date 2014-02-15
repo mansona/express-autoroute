@@ -21,13 +21,25 @@ autoroute(app,options); //where app is an express app;
 
 For express-autoroute to start working you need to have a ```routes/``` folder that contains specially formatted javascript files that expose an autoroute object that contains the public route api. The best way to describe it is with an example. 
 
-Options may include: 
+###Options
+Passed as a JS object to the autoroute initialisation funciton 
+
+```js
+//defaults
+autoroute(app, {
+	throwErrors: false, 
+	logger: require('winston'), //autoroute requires winston internally if you don't pass an instance to it
+	routesDir: 'routes'
+})
+```
 
 ```throwErrors: Boolean``` will throw all errors found while loading routes
 
 ```logger: winston instance``` as a default it will use the internal default winston object. If you wish to use custom settings then pass in an instance defined within your app.	
 
-```routesDir: String``` defaults to ```routes/```
+```routesDir: String``` sets the directory to search for autoroute files
+
+###Example autoroute File
 
 This is the contents of a file  ```routes/blacklists.js```. Note that the name of the file has nothing to do with the resulting endpoint so you can structure your files however you like.
 
