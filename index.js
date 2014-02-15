@@ -12,11 +12,13 @@ module.exports = function(app, options) {
         options.logger.debug('using specified logger')
     }
 
-    var routesDir = path.join(process.cwd(), "routes");
+    if (!options.routesDir) {
+        options.routesDir = path.join(process.cwd(), "routes");
+    }
 
     options.logger.debug("Loading routes directory", {
-        dir: routesDir
+        dir: options.routesDir
     });
 
-    loader.loadDirectory(routesDir, "", app, options);
+    loader.loadDirectory(options.routesDir, "", app, options);
 };
