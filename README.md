@@ -87,7 +87,7 @@ app.post('/api/blacklists', create);
 app.detete('/api/blacklists/:id' : del);
 ```
 
-### Middelwares
+### Middlewares
 A nifty feature in express is the ability to have route specific middlewares, and if they are used correctly they can really reduce the amount of code you write and always keep things DRY. express-autoroute supports the use of route middlewares by just adding an array to the autoroute object. Here is a silly little example but at least it explains the idea: 
 
 ```js 
