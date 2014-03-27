@@ -1,7 +1,7 @@
 {
   "name": "express-autoroute",
   "version": "1.1.0",
-  "description": "Automatically load routes from a structured routes/ folder",
+  "description": "Express Auto Route automatically load routes from a structured routes/ folder",
   "main": "index.js",
   "scripts": {
     "test": "npm run test-node",
