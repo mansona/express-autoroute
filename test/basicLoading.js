@@ -1,10 +1,10 @@
 var autoroute = require('../');
 
-var expect = require('chai').expect;
 var express = require('express');
 var request = require('supertest');
 
 var app;
+var server;
 
 describe('Normal Routes folder loading', function(){
 	before(function(){
@@ -14,10 +14,11 @@ describe('Normal Routes folder loading', function(){
 			throwErrors: true
 		});
 
-		app.listen(255255);
+		server = app.listen(255255);
 	});
-	after(function(){
+	after(function(done){
 		app = null;
+        server.close(done);
 	});
 	describe('test.js', function(){
 		it('should return "get" from /getTest', function(done){

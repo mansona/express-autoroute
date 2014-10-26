@@ -1,10 +1,10 @@
 var autoroute = require('../');
 
-var expect = require('chai').expect;
 var express = require('express');
 var request = require('supertest');
 
 var app;
+var server;
 
 describe('Custom Routes folder loading', function(){
 	before(function(){
@@ -16,10 +16,11 @@ describe('Custom Routes folder loading', function(){
 			routesDir: path.join(process.cwd(), "test", "routes")
 		});
 
-		app.listen(255256);
+		server = app.listen(255256);
 	});
-	after(function(){
+	after(function(done){
 		app = null;
+		server.close(done);
 	});
 	describe('test.js', function(){
 		it('should return "get" from /getTest', function(done){
