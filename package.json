@@ -20,7 +20,7 @@
   "author": "Andrew Manson",
   "license": "MIT",
   "dependencies": {
-    "winston": "^0.8.1"
+    "winston": "^0.7.2"
   },
   "devDependencies": {
     "express": "^4.10.0",
