@@ -20,12 +20,12 @@
   "author": "Andrew Manson",
   "license": "MIT",
   "dependencies": {
-    "winston": "^0.7.2"
+    "winston": "~0.8.1"
   },
   "devDependencies": {
-    "express": "^4.10.0",
-    "mocha": "^2.0.1",
-    "mocha-osx-reporter": "^0.1.2",
-    "supertest": "^0.14.0"
+    "express": "~4.10.0",
+    "mocha": "~2.0.1",
+    "mocha-osx-reporter": "~0.1.2",
+    "supertest": "~0.14.0"
   }
 }
