@@ -3,9 +3,9 @@
 [![Code Climate](https://codeclimate.com/github/Blooie/express-autoroute.png)](https://codeclimate.com/github/Blooie/express-autoroute)
 
 # Express Autoroute
-This helper library has come about after about a year of slowly improving how we structure our NodeJS apps at Blooie and ultimately me being fed up of having to continuously type out ```app.get('/blah', blah_handler)``` and wondering where different paths are being constructed. 
+This helper library has come about after about a year of slowly improving how we structure our NodeJS apps at Blooie and ultimately me being fed up of having to continuously type out ```app.get('/blah', blah_handler)``` and wondering where different paths are being constructed.
 
-I also subscribe to the idea of [convention over configuration](http://en.wikipedia.org/wiki/Convention_over_configuration) because we developers have enough to think about. Also for something like NodeJS where there are so many people trying it out for the first time and fewer people blogging about best practices, sometimes its better to just follow convention and learn good ways to structure your app and write re-usable code. 
+I also subscribe to the idea of [convention over configuration](http://en.wikipedia.org/wiki/Convention_over_configuration) because we developers have enough to think about. Also for something like NodeJS where there are so many people trying it out for the first time and fewer people blogging about best practices, sometimes its better to just follow convention and learn good ways to structure your app and write re-usable code.
 
 ## Installation
 ```js
@@ -13,22 +13,22 @@ npm install express-autoroute
 ```
 
 ## Usage
-First things first you need to enable the autorouter and pass it your express app. 
+First things first you need to enable the autorouter and pass it your express app.
 
 ```js
 var autoroute = require('express-autoroute');
-autoroute(app,options); //where app is an express app; 
+autoroute(app,options); //where app is an express app;
 ```
 
-For express-autoroute to start working you need to have a ```routes/``` folder that contains specially formatted javascript files that expose an autoroute object that contains the public route api. The best way to describe it is with an example. 
+For express-autoroute to start working you need to have a ```routes/``` folder that contains specially formatted javascript files that expose an autoroute object that contains the public route api. The best way to describe it is with an example.
 
 ###Options
-Passed as a JS object to the autoroute initialisation funciton 
+Passed as a JS object to the autoroute initialisation funciton
 
 ```js
 //defaults
 autoroute(app, {
-	throwErrors: false, 
+	throwErrors: false,
 	logger: require('winston'), //autoroute requires winston internally if you don't pass an instance to it
 	routesDir: 'routes'
 })
@@ -36,9 +36,11 @@ autoroute(app, {
 
 ```throwErrors: Boolean``` will throw all errors found while loading routes
 
-```logger: winston instance``` as a default it will use the internal default winston object. If you wish to use custom settings then pass in an instance defined within your app.	
+```logger: winston instance``` as a default it will use the internal default winston object. If you wish to use custom settings then pass in an instance defined within your app.
 
 ```routesDir: String``` sets the directory to search for autoroute files
+
+```routeFile: String``` allows loading of one file instead of a directory, useful for testing
 
 ###Example autoroute File
 
@@ -75,12 +77,12 @@ app.post('/blacklists', create);
 app.detete('/blacklists/:id' : del);
 ```
 
-And thats it! A nicely declarative way to load your routes. 
+And thats it! A nicely declarative way to load your routes.
 
 ### Folders
 express-autoroute also supports routes being separated into folders. The folder name will be added as a prefix to the express endpoints. For example, if you use the same ```blacklists.js``` file from before but move it to the folder ```routes/api/blacklists.js``` the resulting express commands will look like this
 
-```js 
+```js
 app.get('/api/blacklists/', get_all);
 app.get('/api/blacklists/:id', get_all);
 app.post('/api/blacklists/:id', update);
@@ -89,9 +91,9 @@ app.detete('/api/blacklists/:id' : del);
 ```
 
 ### Middlewares
-A nifty feature in express is the ability to have route specific middlewares, and if they are used correctly they can really reduce the amount of code you write and always keep things DRY. express-autoroute supports the use of route middlewares by just adding an array to the autoroute object. Here is a silly little example but at least it explains the idea: 
+A nifty feature in express is the ability to have route specific middlewares, and if they are used correctly they can really reduce the amount of code you write and always keep things DRY. express-autoroute supports the use of route middlewares by just adding an array to the autoroute object. Here is a silly little example but at least it explains the idea:
 
-```js 
+```js
 module.exports.autoroute = {
 	get: {
 		'/blacklists' : [authentication, get_all]
@@ -105,7 +107,7 @@ function get_all(req, res){
 }
 
 function authentication(req, res, next){
-	//get the user object or whatever 
+	//get the user object or whatever
 	req.user = dbUser;
 	next();
 }
