@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha",
-    "test-watch": "node_modules/mocha/bin/mocha --watch",
+    "test-watch": "npm run test -- --watch",
     "test-watch-mac": "node_modules/mocha/bin/mocha --watch --reporter mocha-osx-reporter"
   },
   "repository": {

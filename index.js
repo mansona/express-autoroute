@@ -13,7 +13,9 @@ module.exports = function(app, options) {
 
     if (!options.routesDir && !options.routeFile) {
         options.routesDir = path.join(process.cwd(), "routes");
-    } else if (options.routesDir) {
+    }
+
+    if (options.routesDir) {
 
         options.logger.debug("Loading routes directory", {
             dir: options.routesDir
