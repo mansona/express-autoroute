@@ -7,18 +7,25 @@ module.exports = function(app, options) {
     if (!options.logger || (!(options.logger.debug && typeof options.logger.debug == 'function'))) {
         options.logger = require('winston');
         options.logger.debug('using custom logger');
-    }
-    else {
+    } else {
         options.logger.debug('using specified logger')
     }
 
-    if (!options.routesDir) {
+    if (!options.routesDir && !options.routeFile) {
         options.routesDir = path.join(process.cwd(), "routes");
+    } else if (options.routesDir) {
+
+        options.logger.debug("Loading routes directory", {
+            dir: options.routesDir
+        });
+
+        loader.loadDirectory(options.routesDir, "", app, options);
+    } else if (options.routeFile) {
+        options.logger.debug("Loading route file", {
+            file: options.routeFile
+        });
+        loader.loadFile(options.routeFile, "", app, options);
     }
 
-    options.logger.debug("Loading routes directory", {
-        dir: options.routesDir
-    });
 
-    loader.loadDirectory(options.routesDir, "", app, options);
 };
