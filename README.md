@@ -61,6 +61,10 @@ module.exports.autoroute = {
 	}
 };
 
+module.exports.init = {
+	//add initialization code here...	
+};
+
 function get_all(req, res){
 	//do something
 }
