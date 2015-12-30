@@ -1,9 +1,9 @@
-[![Dependency Status](https://david-dm.org/Blooie/express-autoroute.png)](https://david-dm.org/Blooie/express-autoroute)
-[![Build Status](https://travis-ci.org/Blooie/express-autoroute.png?branch=develop)](https://travis-ci.org/Blooie/express-autoroute)
-[![Code Climate](https://codeclimate.com/github/Blooie/express-autoroute.png)](https://codeclimate.com/github/Blooie/express-autoroute)
+[![Dependency Status](https://david-dm.org/stonecircle/express-autoroute.png)](https://david-dm.org/stonecircle/express-autoroute)
+[![Build Status](https://travis-ci.org/stonecircle/express-autoroute.png?branch=develop)](https://travis-ci.org/stonecircle/express-autoroute)
+[![Code Climate](https://codeclimate.com/github/stonecircle/express-autoroute.png)](https://codeclimate.com/github/stonecircle/express-autoroute)
 
 # Express Autoroute
-This helper library has come about after about a year of slowly improving how we structure our NodeJS apps at Blooie and ultimately me being fed up of having to continuously type out ```app.get('/blah', blah_handler)``` and wondering where different paths are being constructed.
+This helper library originally came about after about a year of slowly improving how we structure our NodeJS and ultimately me being fed up of having to continuously type out ```app.get('/blah', blah_handler)``` and wondering where different paths are being constructed.
 
 I also subscribe to the idea of [convention over configuration](http://en.wikipedia.org/wiki/Convention_over_configuration) because we developers have enough to think about. Also for something like NodeJS where there are so many people trying it out for the first time and fewer people blogging about best practices, sometimes its better to just follow convention and learn good ways to structure your app and write re-usable code.
 
@@ -114,12 +114,10 @@ function authentication(req, res, next){
 ```
 
 # Licence
-Copyright (c) 2013, Andrew Manson <andrew@bloo.ie>, Blooie Limited <info@bloo.ie>
+Copyright (c) 2013, Chris Manson <chris@stonecircle.io>, Stone Circle Design LTD <info@stonecircle.io>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Blooie/express-autoroute/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

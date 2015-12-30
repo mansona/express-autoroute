@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Blooie/express-autoroute.git"
+    "url": "git@github.com:stonecircle/express-autoroute.git"
   },
   "keywords": [
     "express",
     "routing",
     "automation"
   ],
-  "author": "Andrew Manson",
+  "author": "Chris Manson <chris@stonecircle.io>",
   "license": "MIT",
   "dependencies": {
     "winston": "^2.1.1"
