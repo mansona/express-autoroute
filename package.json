@@ -3,6 +3,7 @@
   "version": "1.2.3",
   "description": "Express Auto Route automatically load routes from a structured routes/ folder",
   "main": "index.js",
+  "readmeFilename": "README.md",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha",
     "test-watch": "npm run test -- --watch",
