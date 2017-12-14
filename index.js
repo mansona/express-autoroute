@@ -1,12 +1,11 @@
-'use strict';
-
 const loader = require('./lib/loader');
 const path = require('path');
 
-module.exports = function (app, options) {
-    // is a winston instance is passed as the second argument it will be used for autoroute logging
-    // otherwise it will use a 'clean' winston instance
+module.exports = function expressAutoroute(app, options) {
+  // is a winston instance is passed as the second argument it will be used for autoroute logging
+  // otherwise it will use a 'clean' winston instance
   if (!options.logger || (!(options.logger.debug && typeof options.logger.debug === 'function'))) {
+    // eslint-disable-next-line global-require,no-param-reassign
     options.logger = require('winston');
     options.logger.debug('using custom logger');
   } else {
@@ -14,6 +13,7 @@ module.exports = function (app, options) {
   }
 
   if (!options.routesDir && !options.routeFile) {
+    // eslint-disable-next-line no-param-reassign
     options.routesDir = path.join(process.cwd(), 'routes');
   }
 
@@ -27,6 +27,6 @@ module.exports = function (app, options) {
     options.logger.debug('Loading route file', {
       file: options.routeFile,
     });
-    loader.loadFile(options.routeFile, '', app, options);
+    loader.loadFile(options.routeFile, options.prefix || '', app, options);
   }
 };
