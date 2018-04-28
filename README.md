@@ -42,7 +42,7 @@ autoroute(app, {
 
 ```routeFile: String``` allows loading of one file instead of a directory, useful for testing
 
-###Example autoroute File
+### Example autoroute File
 
 This is the contents of a file  ```routes/blacklists.js```. Note that the name of the file has nothing to do with the resulting endpoint so you can structure your files however you like.
 
