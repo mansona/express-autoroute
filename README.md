@@ -22,7 +22,7 @@ autoroute(app,options); //where app is an express app;
 
 For express-autoroute to start working you need to have a ```routes/``` folder that contains specially formatted javascript files that expose an autoroute object that contains the public route api. The best way to describe it is with an example.
 
-###Options
+### Options
 Passed as a JS object to the autoroute initialisation funciton
 
 ```js
