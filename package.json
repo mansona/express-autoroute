@@ -1,6 +1,6 @@
 {
   "name": "express-autoroute",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Express Auto Route automatically load routes from a structured routes/ folder",
   "main": "index.js",
   "readmeFilename": "README.md",
