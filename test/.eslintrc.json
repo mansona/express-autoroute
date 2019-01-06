@@ -3,6 +3,8 @@
     "node": true,
     "mocha": true
   },
-
-  "extends": "airbnb"
+  "rules": {
+    "strict": 0
+  },
+  "extends": "airbnb-base"
 }
