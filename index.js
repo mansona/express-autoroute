@@ -1,5 +1,6 @@
-const loader = require('./lib/loader');
 const path = require('path');
+
+const loader = require('./lib/loader');
 
 module.exports = function expressAutoroute(app, options) {
   // is a winston instance is passed as the second argument it will be used for autoroute logging

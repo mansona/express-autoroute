@@ -5,6 +5,7 @@
   "main": "index.js",
   "readmeFilename": "README.md",
   "scripts": {
+    "lint:js": "eslint .",
     "test": "node_modules/mocha/bin/mocha",
     "test-watch": "npm run test -- --watch",
     "test-watch-mac": "node_modules/mocha/bin/mocha --watch --reporter mocha-osx-reporter"
